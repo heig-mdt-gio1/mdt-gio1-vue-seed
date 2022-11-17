@@ -1,10 +1,14 @@
 <template>
-  <img id="vue-icon" src="./assets/logo.png"/>
+  <img id="vue-icon" src="./assets/logo.png" alt="Logo" />
   <!-- Bulma: menu tabs -->
   <div class="tabs is-centered">
     <ul>
-      <li v-for="menu in menuList" :key="menu.name" :class="{ 'is-active': currentRoute === menu.route }">
-          <router-link :to="menu.route"> {{ menu.menuname }} </router-link>
+      <li
+        v-for="menu in menuList"
+        :key="menu.name"
+        :class="{ 'is-active': currentRoute === menu.route }"
+      >
+        <router-link :to="menu.route"> {{ menu.menuname }} </router-link>
       </li>
     </ul>
   </div>
@@ -15,38 +19,38 @@
 <script>
 export default {
   name: 'App-root',
-  data(){
+  data() {
     return {
-      menuList:[
+      menuList: [
         {
-          menuname:"Hello",
-          route:"/"
+          menuname: 'Hello',
+          route: '/'
         },
-        { 
-          menuname:"Axios",
-          route:"/axios"
+        {
+          menuname: 'Axios',
+          route: '/axios'
         },
-        { 
-          menuname:"2d_openlayers",
-          route:"/openlayers"
+        {
+          menuname: '2d_openlayers',
+          route: '/openlayers'
         },
-        { 
-          menuname:"2d_leaflet",
-          route:"/leaflet"
+        {
+          menuname: '2d_leaflet',
+          route: '/leaflet'
         },
-        { 
-          menuname:"3d_cesium",
-          route:"/cesium"
+        {
+          menuname: '3d_cesium',
+          route: '/cesium'
         }
-      ] 
-    }
+      ]
+    };
   },
   computed: {
-    currentRoute(){
+    currentRoute() {
       return this.$route.path;
     }
   }
-}
+};
 </script>
 
 <style>
@@ -60,7 +64,7 @@ export default {
   height: 100%;
   width: 100%;
 }
-#vue-icon{
+#vue-icon {
   height: 5em;
 }
 </style>
