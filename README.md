@@ -14,7 +14,7 @@ It includes :
 First download the project with Git:
 
 ```
-git clone https://github.com/thibaud-c/seed-vuejs3.0-carto2D-3D.git your_project_name
+git clone https://github.com/Tazaf/mdt-gio1-vue-seed your_project_name
 ```
 
 Then open the folder in your command line, and install the needed dependencies:
